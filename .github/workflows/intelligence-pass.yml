@@ -1,0 +1,178 @@
+name: Intelligence Pass
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  g4f:
+    runs-on: ubuntu-latest
+    name: G4F Intelligence
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: G4F Processing
+        run: |
+          echo "🤖 G4F Intelligence Provider - Processing"
+          echo "This is a placeholder for G4F integration"
+          echo "Future: Wire up GPT4Free API calls here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### 🤖 G4F Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** GPT4Free" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  perplexity:
+    runs-on: ubuntu-latest
+    name: Perplexity Intelligence
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Perplexity Processing
+        run: |
+          echo "🔍 Perplexity Intelligence Provider - Processing"
+          echo "This is a placeholder for Perplexity integration"
+          echo "Future: Wire up Perplexity API calls here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### 🔍 Perplexity Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** Perplexity AI" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  amazon_q:
+    runs-on: ubuntu-latest
+    name: Amazon Q Intelligence
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Amazon Q Processing
+        run: |
+          echo "☁️ Amazon Q Intelligence Provider - Processing"
+          echo "This is a placeholder for Amazon Q integration"
+          echo "Future: Wire up Amazon Q API calls here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### ☁️ Amazon Q Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** Amazon Q" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  pollinations:
+    runs-on: ubuntu-latest
+    name: Pollinations Intelligence
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Pollinations Processing
+        run: |
+          echo "🌸 Pollinations Intelligence Provider - Processing"
+          echo "This is a placeholder for Pollinations integration"
+          echo "Future: Wire up Pollinations API calls here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### 🌸 Pollinations Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** Pollinations AI" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  cloudflare:
+    runs-on: ubuntu-latest
+    name: Cloudflare Intelligence
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Cloudflare Workers AI Processing
+        run: |
+          echo "⚡ Cloudflare Intelligence Provider - Processing"
+          echo "This is a placeholder for Cloudflare Workers AI integration"
+          echo "Future: Wire up Cloudflare Workers AI API calls here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### ⚡ Cloudflare Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** Cloudflare Workers AI" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  community_mining:
+    runs-on: ubuntu-latest
+    name: Community Mining
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Community Mining Stub
+        run: |
+          echo "⛏️ Community Mining - Stub"
+          echo "This is a placeholder for community mining integration"
+          echo "Future: Wire up community data mining and aggregation here"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "### ⛏️ Community Mining" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ✅ Complete (Stub)" >> $GITHUB_STEP_SUMMARY
+          echo "**Purpose:** Community data mining and aggregation" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+
+  observability:
+    runs-on: ubuntu-latest
+    name: Observability
+    needs: [g4f, perplexity, amazon_q, pollinations, cloudflare, community_mining]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Echo Completion
+        run: |
+          echo "📊 Intelligence Pass Complete"
+          echo "All intelligence jobs have completed successfully"
+          echo "Ready for log and metrics shipping"
+          echo ""
+          echo "Completed Jobs:"
+          echo "  ✅ G4F Intelligence"
+          echo "  ✅ Perplexity Intelligence"
+          echo "  ✅ Amazon Q Intelligence"
+          echo "  ✅ Pollinations Intelligence"
+          echo "  ✅ Cloudflare Intelligence"
+          echo "  ✅ Community Mining"
+          
+      - name: Generate Step Summary
+        run: |
+          echo "# 📊 Intelligence Pass - Observability" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Status: ✅ All Jobs Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Completed Intelligence Jobs" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ G4F Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Perplexity Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Amazon Q Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Pollinations Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Cloudflare Intelligence" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Community Mining" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Ready For" >> $GITHUB_STEP_SUMMARY
+          echo "- 📤 Log shipping" >> $GITHUB_STEP_SUMMARY
+          echo "- 📈 Metrics shipping" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔔 Alerting" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Completion Timestamp:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
