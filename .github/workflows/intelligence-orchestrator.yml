@@ -1,0 +1,26 @@
+name: Intelligence Orchestrator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */12 * * *'
+
+jobs:
+  edge_inference:
+    name: Edge Inference Deployment & Health
+    uses: ./.github/workflows/edge-inference.yml
+
+  pr_generation:
+    name: Autonomous PR Generation
+    uses: ./.github/workflows/pr-generation.yml
+    needs: edge_inference
+
+  community_mining:
+    name: Community Pattern Mining
+    uses: ./.github/workflows/community-mining.yml
+    needs: pr_generation
+
+  vectorization:
+    name: Vectorization & Semantic Search
+    uses: ./.github/workflows/vectorization.yml
+    needs: community_mining
