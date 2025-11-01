@@ -1,0 +1,16 @@
+# 🎯 CANONICAL HOMELAB CONFIG
+domain: "wealthy.st"
+proxmox:
+  endpoint: "https://192.168.1.10:8006"
+  username: "root@pam"
+  password: "${PROXMOX_PASSWORD}"
+cloudflare:
+  token: "${CLOUDFLARE_TOKEN}"
+  accountId: "${CLOUDFLARE_ACCOUNT_ID}"
+  zoneId: "${CLOUDFLARE_ZONE_ID}"
+tailscale:
+  authKey: "${TAILSCALE_AUTH_KEY}"
+  tailnet: "wealthy.st"
+hardware:
+  r240: "192.168.1.20"
+  r7910: "192.168.1.21"

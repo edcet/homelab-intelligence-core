@@ -1,2 +1,17 @@
-# homelab-intelligence-core
-🧠 AI-Native Homelab Intelligence Platform - Autonomous analysis, optimization, and evolution of 12+ repository constellation using edge AI, community learning, and automated PR generation
+# 🎯 Canonical Zero-Touch Homelab
+
+**ONE REPO. ONE COMMAND. ZERO BULLSHIT.**
+
+## Deploy
+
+```bash
+git clone https://github.com/edcet/homelab-intelligence-core
+cd homelab-intelligence-core
+./deploy.ts
+```
+
+**Result**: Production homelab with Proxmox+Tailscale+Cloudflare+service mesh.
+
+**Services**: https://api.wealthy.st, https://proxy.wealthy.st, https://*.wealthy.st
+
+**DONE.**
